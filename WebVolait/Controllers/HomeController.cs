@@ -13,16 +13,16 @@ namespace WebVolait.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Sobre()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Sua página para mais informações";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Contato()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Sua página para contato";
 
             return View();
         }
