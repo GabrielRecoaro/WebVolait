@@ -134,7 +134,10 @@
     <Compile Include="Models\Pacote.cs" />
     <Compile Include="Models\Passeio.cs" />
     <Compile Include="Models\Tipo_Hosp.cs" />
+    <Compile Include="Models\Tipo_Pagto.cs" />
+    <Compile Include="Models\Tipo_Transp.cs" />
     <Compile Include="Models\Transporte.cs" />
+    <Compile Include="Models\Venda.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
