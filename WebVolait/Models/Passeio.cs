@@ -23,6 +23,7 @@ namespace WebVolait.Models
         [StringLength(300, MinimumLength = 10, ErrorMessage = "*O campo permite apenas 10 a 300 caracteres")]
         public string Desc_Passeio { get; set; }
 
+        // DURACAO FALTANDO
 
     }
 }
