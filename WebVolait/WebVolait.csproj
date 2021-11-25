@@ -130,9 +130,11 @@
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\Hospedagem.cs" />
     <Compile Include="Models\Item_Pacote.cs" />
+    <Compile Include="Models\Item_Venda.cs" />
     <Compile Include="Models\Pacote.cs" />
     <Compile Include="Models\Passeio.cs" />
     <Compile Include="Models\Tipo_Hosp.cs" />
+    <Compile Include="Models\Transporte.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
