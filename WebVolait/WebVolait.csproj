@@ -126,8 +126,13 @@
     <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HospedagemController.cs" />
+    <Compile Include="Controllers\Item_PacoteController.cs" />
+    <Compile Include="Controllers\Item_VendaController.cs" />
     <Compile Include="Controllers\PacoteController.cs" />
     <Compile Include="Controllers\PasseioController.cs" />
+    <Compile Include="Controllers\Tipo_HospController.cs" />
+    <Compile Include="Controllers\Tipo_PagtoController.cs" />
+    <Compile Include="Controllers\Tipo_TranspController.cs" />
     <Compile Include="Controllers\TransporteController.cs" />
     <Compile Include="Controllers\VendaController.cs" />
     <Compile Include="Global.asax.cs">
@@ -191,8 +196,13 @@
     <Folder Include="Views\Cliente\" />
     <Folder Include="Views\Funcionario\" />
     <Folder Include="Views\Hospedagem\" />
+    <Folder Include="Views\Item_Pacote\" />
+    <Folder Include="Views\Item_Venda\" />
     <Folder Include="Views\Pacote\" />
     <Folder Include="Views\Passeio\" />
+    <Folder Include="Views\Tipo_Hosp\" />
+    <Folder Include="Views\Tipo_Pagto\" />
+    <Folder Include="Views\Tipo_Transp\" />
     <Folder Include="Views\Transporte\" />
     <Folder Include="Views\Venda\" />
   </ItemGroup>
