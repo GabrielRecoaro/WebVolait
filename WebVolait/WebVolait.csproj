@@ -189,22 +189,22 @@
     <Content Include="Views\Home\Sobre.cshtml" />
     <Content Include="Views\Home\Contato.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Atendimento\Index.cshtml" />
+    <Content Include="Views\Funcionario\Index.cshtml" />
+    <Content Include="Views\Hospedagem\Index.cshtml" />
+    <Content Include="Views\Pacote\Index.cshtml" />
+    <Content Include="Views\Passeio\Index.cshtml" />
+    <Content Include="Views\Transporte\Index.cshtml" />
+    <Content Include="Views\Venda\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Atendimento\" />
-    <Folder Include="Views\Cliente\" />
-    <Folder Include="Views\Funcionario\" />
-    <Folder Include="Views\Hospedagem\" />
     <Folder Include="Views\Item_Pacote\" />
     <Folder Include="Views\Item_Venda\" />
-    <Folder Include="Views\Pacote\" />
-    <Folder Include="Views\Passeio\" />
     <Folder Include="Views\Tipo_Hosp\" />
     <Folder Include="Views\Tipo_Pagto\" />
     <Folder Include="Views\Tipo_Transp\" />
-    <Folder Include="Views\Transporte\" />
-    <Folder Include="Views\Venda\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
