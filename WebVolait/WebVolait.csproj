@@ -121,7 +121,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AtendimentoController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\FuncionarioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HospedagemController.cs" />
+    <Compile Include="Controllers\PacoteController.cs" />
+    <Compile Include="Controllers\PasseioController.cs" />
+    <Compile Include="Controllers\TransporteController.cs" />
+    <Compile Include="Controllers\VendaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -179,6 +187,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Atendimento\" />
+    <Folder Include="Views\Cliente\" />
+    <Folder Include="Views\Funcionario\" />
+    <Folder Include="Views\Hospedagem\" />
+    <Folder Include="Views\Pacote\" />
+    <Folder Include="Views\Passeio\" />
+    <Folder Include="Views\Transporte\" />
+    <Folder Include="Views\Venda\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
