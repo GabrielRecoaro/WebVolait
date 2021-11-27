@@ -1,7 +1,61 @@
-﻿
+﻿@model WebVolait.Models.Funcionario
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Funcionario</h2>
+<h2>Novo <b>Funcionário</b></h2>
+
+@using (Html.BeginForm("Funcionario", "Funcionario", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+<fieldset>
+    <legend> Cadastro de Funcionários </legend>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Cod_Func)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Cod_Func)
+        @Html.ValidationMessageFor(m => m.Cod_Func)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.NomeCompleto_Func)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.NomeCompleto_Func)
+        @Html.ValidationMessageFor(m => m.NomeCompleto_Func)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.CPF_Func)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.CPF_Func)
+        @Html.ValidationMessageFor(m => m.CPF_Func)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Email_Func)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Email_Func)
+        @Html.ValidationMessageFor(m => m.Email_Func)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Telefone_Func)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Telefone_Func)
+        @Html.ValidationMessageFor(m => m.Telefone_Func)
+    </div>
+
+    <div>
+        <br><input type="submit" value="Enviar" />
+    </div>
+
+</fieldset>
+}
 
