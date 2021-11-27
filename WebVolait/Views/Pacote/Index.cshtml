@@ -1,7 +1,69 @@
-﻿
+﻿@model WebVolait.Models.Pacote
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Pacote</h2>
+<h2>Novo <b>Pacote</b></h2>
+
+@using (Html.BeginForm("Pacote", "Pacote", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend> Cadastro de Pacote </legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Cod_Pacote)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Cod_Pacote)
+            @Html.ValidationMessageFor(m => m.Cod_Pacote)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Nome_Pacote)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Nome_Pacote)
+            @Html.ValidationMessageFor(m => m.Nome_Pacote)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Desc_Pacote)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Desc_Pacote)
+            @Html.ValidationMessageFor(m => m.Desc_Pacote)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Cod_ItemPacote)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Cod_ItemPacote)
+            @Html.ValidationMessageFor(m => m.Cod_ItemPacote)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Destino_Pacote)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Destino_Pacote)
+            @Html.ValidationMessageFor(m => m.Destino_Pacote)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Valor_Pacote)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Valor_Pacote)
+            @Html.ValidationMessageFor(m => m.Valor_Pacote)
+        </div>
+
+        <div>
+            <br><input type="submit" value="Enviar" />
+        </div>
+
+    </fieldset>
+}
 

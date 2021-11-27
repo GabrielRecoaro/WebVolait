@@ -1,7 +1,53 @@
-﻿
+﻿@model WebVolait.Models.Atendimento
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Atendimento</h2>
+<h2>Novo <b>Atendimento</b></h2>
+
+@using (Html.BeginForm("Atendimento", "Atendimento", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend> Atendimento </legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Cod_Atend)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Cod_Atend)
+            @Html.ValidationMessageFor(m => m.Cod_Atend)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Desc_Atent)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Desc_Atent)
+            @Html.ValidationMessageFor(m => m.Desc_Atent)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.NomeCliente_Atend)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.NomeCliente_Atend)
+            @Html.ValidationMessageFor(m => m.NomeCliente_Atend)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Cod_Func)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Cod_Func)
+            @Html.ValidationMessageFor(m => m.Cod_Func)
+        </div>
+
+        <div>
+            <br><input type="submit" value="Enviar" />
+        </div>
+
+    </fieldset>
+}
 

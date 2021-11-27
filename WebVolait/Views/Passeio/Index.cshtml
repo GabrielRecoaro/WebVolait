@@ -1,7 +1,61 @@
-﻿
+﻿@model WebVolait.Models.Passeio
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Passeio</h2>
+<h2>Novo <b>Passeio</b></h2>
+
+@using (Html.BeginForm("Passeio", "Passeio", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend> Cadastro de Passeios </legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Cod_Passeio)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Cod_Passeio)
+            @Html.ValidationMessageFor(m => m.Cod_Passeio)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Nome_Passeio)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Nome_Passeio)
+            @Html.ValidationMessageFor(m => m.Nome_Passeio)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Desc_Passeio)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Desc_Passeio)
+            @Html.ValidationMessageFor(m => m.Desc_Passeio)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Empresa_Passeio)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Empresa_Passeio)
+            @Html.ValidationMessageFor(m => m.Empresa_Passeio)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.CNPJ_Passeio)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.CNPJ_Passeio)
+            @Html.ValidationMessageFor(m => m.CNPJ_Passeio)
+        </div>
+
+        <div>
+            <br><input type="submit" value="Enviar" />
+        </div>
+
+    </fieldset>
+}
 

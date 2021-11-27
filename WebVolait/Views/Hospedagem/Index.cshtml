@@ -1,7 +1,53 @@
-﻿
+﻿@model WebVolait.Models.Hospedagem
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Hospedagem</h2>
+<h2>Nova <b>Hospedagem</b></h2>
+
+@using (Html.BeginForm("Hospedagem", "Hospedagem", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend> Hospedagem </legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Cod_Hosp)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Cod_Hosp)
+            @Html.ValidationMessageFor(m => m.Cod_Hosp)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Nome_Hosp)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Nome_Hosp)
+            @Html.ValidationMessageFor(m => m.Nome_Hosp)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.CNPJ_Hosp)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.CNPJ_Hosp)
+            @Html.ValidationMessageFor(m => m.CNPJ_Hosp)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Cod_TipoHosp)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Cod_TipoHosp)
+            @Html.ValidationMessageFor(m => m.Cod_TipoHosp)
+        </div>
+
+        <div>
+            <br><input type="submit" value="Enviar" />
+        </div>
+
+    </fieldset>
+}
 

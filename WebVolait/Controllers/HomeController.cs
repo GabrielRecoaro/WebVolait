@@ -13,18 +13,5 @@ namespace WebVolait.Controllers
             return View();
         }
 
-        public ActionResult Sobre()
-        {
-            ViewBag.Message = "Sua página para mais informações";
-
-            return View();
-        }
-
-        public ActionResult Contato()
-        {
-            ViewBag.Message = "Sua página para contato";
-
-            return View();
-        }
     }
 }

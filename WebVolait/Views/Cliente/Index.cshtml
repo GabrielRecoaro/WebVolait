@@ -1,7 +1,55 @@
-﻿
+﻿@model WebVolait.Models.Cliente
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Cliente</h2>
+<h2>Novo <b>Cliente</b></h2>
+
+@using (Html.BeginForm("Cliente", "Cliente", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend> Cadastro de Clientes </legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Nome_Cli)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Nome_Cli)
+            @Html.ValidationMessageFor(m => m.Nome_Cli)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.CPF_Cli)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.CPF_Cli)
+            @Html.ValidationMessageFor(m => m.CPF_Cli)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Email_Cli)
+        </div>
+
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Email_Cli)
+            @Html.ValidationMessageFor(m => m.Email_Cli)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Telefone_Cli)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.Telefone_Cli)
+            @Html.ValidationMessageFor(m => m.Telefone_Cli)
+        </div>
+
+        <div>
+            <br><input type="submit" value="Enviar" />
+        </div>
+
+    </fieldset>
+}
+
 
