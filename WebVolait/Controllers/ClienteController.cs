@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using WebVolait.Models;
 using System.Web.Mvc;
+using WebVolait.Repositorio;
 
 namespace WebVolait.Controllers
 {
@@ -20,5 +21,15 @@ namespace WebVolait.Controllers
             var cliente = new Cliente();
             return View(cliente);
         }
+
+        /*
+       public ActionResult ListarCliente(Cliente cliente)
+       {
+           var ExibirCliente = new Acoes();
+           var TodosCliente = ExibirCliente.ListarCliente();
+           return View(TodosCliente);
+
+       }*/
+
     }
 }

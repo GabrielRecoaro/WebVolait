@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebVolait.Models;
+using WebVolait.Repositorio;
 
 namespace WebVolait.Controllers
 {
@@ -20,5 +21,14 @@ namespace WebVolait.Controllers
             var atendimento = new Atendimento();
             return View(atendimento);
         }
+
+        /*
+       public ActionResult ListarAtendimento(Atendimento atendimento)
+       {
+           var ExibirAtendimento = new Acoes();
+           var TodosAtendimento = ExibirAtendimento.ListarAtendimento();
+           return View(TodosAtendimento);
+
+       }*/
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebVolait.Models;
+using WebVolait.Repositorio;
 
 namespace WebVolait.Controllers
 {
@@ -20,6 +21,15 @@ namespace WebVolait.Controllers
             var funcionario = new Funcionario();
             return View(funcionario);
         }
+
+        /*
+        public ActionResult ListarFuncionario(Funcionario funcionario)
+        {
+            var ExibirFunc = new Acoes();
+            var TodosFunc = ExibirFunc.ListarFuncionario();
+            return View(TodosFunc);
+
+        }*/
 
     }
 }
