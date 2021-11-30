@@ -21,5 +21,33 @@ namespace WebVolait.Controllers
             var transporte = new Transporte();
             return View(transporte);
         }
+        /*
+        Acoes ac = new Acoes();
+        [HttpPost]
+
+
+        public ActionResult Transporte(Transporte transporte)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    ac.CadastrarTransporte(transporte);
+                    return RedirectToAction("ListarTransporte");
+                }
+                return View(transporte);
+            }
+            catch
+            {
+                return RedirectToAction("Transporte");
+            }
+        }
+
+        public ActionResult ListarTransporte(Transporte transporte)
+        {
+            var ExibirTransporte = new Acoes();
+            var TodosTransporte = ExibirTransporte.ListarTransporte();
+            return View(TodosTransporte);
+        }*/
     }
 }

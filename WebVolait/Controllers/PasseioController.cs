@@ -21,5 +21,34 @@ namespace WebVolait.Controllers
             var passeio = new Passeio();
             return View(passeio);
         }
+        
+        /*
+        Acoes ac = new Acoes();
+        [HttpPost]
+
+
+        public ActionResult Passeio(Passeio passseio)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    ac.CadastrarPasseio(passeio);
+                    return RedirectToAction("ListarPasseio");
+                }
+                return View(passeio);
+            }
+            catch
+            {
+                return RedirectToAction("Passeio");
+            }
+        }
+
+        public ActionResult ListarPasseio(Passeio passeio)
+        {
+            var ExibirPasseio = new Acoes();
+            var TodosPasseio = ExibirPasseio.ListarPasseio();
+            return View(TodosPasseio);
+        }*/
     }
 }
