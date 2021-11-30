@@ -21,5 +21,33 @@ namespace WebVolait.Controllers
             var hospedagem = new Hospedagem();
             return View(hospedagem);
         }
+        /*
+        Acoes ac = new Acoes();
+        [HttpPost]
+
+
+        public ActionResult Hospedagem(Hospedagem hospedagem)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    ac.CadastrarJogo(hospedagem);
+                    return RedirectToAction("ListarHospedagem");
+                }
+                return View(hospedagem);
+            }
+            catch
+            {
+                return RedirectToAction("Hospedagem");
+            }
+        }
+
+        public ActionResult ListarHospedagem(Hospedagem hospedagem)
+        {
+            var ExibirHospedagem = new Acoes();
+            var TodosHospedagem = ExibirHospedagem.ListarHospedagem();
+            return View(TodosHospedagem);
+        }*/
     }
 }

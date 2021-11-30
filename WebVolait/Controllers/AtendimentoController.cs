@@ -23,6 +23,27 @@ namespace WebVolait.Controllers
         }
 
         /*
+         Acoes ac = new Acoes();
+        [HttpPost]
+
+
+        public ActionResult Atendimento(Antendimento atendimento)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    ac.CadastrarAtendimento(atendimento);
+                    return RedirectToAction("ListarAtendimento");
+                }
+                return View(atendimento);
+            }
+            catch
+            {
+                return RedirectToAction("Atendimento");
+            }
+        }
+
        public ActionResult ListarAtendimento(Atendimento atendimento)
        {
            var ExibirAtendimento = new Acoes();

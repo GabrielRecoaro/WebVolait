@@ -23,6 +23,27 @@ namespace WebVolait.Controllers
         }
 
         /*
+          
+         Acoes ac = new Acoes();
+        [HttpPost]
+
+        public ActionResult Cliente(Cliente cliente)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    ac.CadastrarCliente(cliente);
+                    return RedirectToAction("ListarCliente");
+                }
+                return View(cliente);
+            }
+            catch
+            {
+                return RedirectToAction("Cliente");
+            }
+        }
+
        public ActionResult ListarCliente(Cliente cliente)
        {
            var ExibirCliente = new Acoes();

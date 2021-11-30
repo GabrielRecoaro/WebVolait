@@ -20,9 +20,29 @@ namespace WebVolait.Controllers
         {
             var funcionario = new Funcionario();
             return View(funcionario);
+        }/*
+
+        Acoes ac = new Acoes();
+
+        [HttpPost]
+
+        public ActionResult Funcionario(Funcionario funcionario)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    ac.CadastrarFuncionario(funcionario);
+                    return RedirectToAction("ListarFuncionario");
+                }
+                return View(funcionario);
+            }
+            catch
+            {
+                return RedirectToAction("Funcionario");
+            }
         }
 
-        /*
         public ActionResult ListarFuncionario(Funcionario funcionario)
         {
             var ExibirFunc = new Acoes();
