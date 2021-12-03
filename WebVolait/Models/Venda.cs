@@ -16,25 +16,25 @@ namespace WebVolait.Models
         [Display(Name = "Data de venda")]
         [Required(ErrorMessage = "*O campo data de venda é obrigatório")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
-        public DateTime JogoDtLanc
+        public DateTime Data_Venda
         {
             get
             {
-                return this.Data_Venda.HasValue
-                    ? this.Data_Venda.Value
+                return this.data_Venda.HasValue
+                    ? this.data_Venda.Value
                     : DateTime.Now;
             }
             set
             {
-                this.Data_Venda = value;
+                this.data_Venda = value;
             }
 
 
         }
 
-        private DateTime? Data_Venda = null;
+        private DateTime? data_Venda = null;
 
-        [Display(Name = "Código do funcionário")]
+        [Display(Name = "Nome do funcionário")]
         [Required(ErrorMessage = "*O campo código é obrigatório")]
         [Range(1, 4, ErrorMessage = "*Código inválido")]
         public int Cod_Func { get; set; }
@@ -44,7 +44,7 @@ namespace WebVolait.Models
         [Range(1, 4, ErrorMessage = "*Código inválido")]
         public int Cod_TipoPagto { get; set; }
 
-        [Display(Name = "Código do cliente")]
+        [Display(Name = "Nome do cliente")]
         [Required(ErrorMessage = "*O campo código é obrigatório")]
         [Range(1, 4, ErrorMessage = "*Código inválido")]
         public int Cod_Cli { get; set; }

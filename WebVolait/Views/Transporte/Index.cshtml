@@ -9,45 +9,53 @@
 {
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend> Cadastro de Transporte </legend>
+<fieldset>
+    <legend> Cadastro de Transporte </legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(m => m.Cod_Transp)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(m => m.Cod_Transp)
-            @Html.ValidationMessageFor(m => m.Cod_Transp)
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Cod_Transp)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Cod_Transp)
+        @Html.ValidationMessageFor(m => m.Cod_Transp)
+    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(m => m.Cod_TipoTransp)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(m => m.Cod_TipoTransp)
-            @Html.ValidationMessageFor(m => m.Cod_TipoTransp)
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Cod_TipoTransp)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Cod_TipoTransp)
+        @Html.ValidationMessageFor(m => m.Cod_TipoTransp)
+    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(m => m.Empresa_Transp)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(m => m.Empresa_Transp)
-            @Html.ValidationMessageFor(m => m.Empresa_Transp)
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Empresa_Transp)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Empresa_Transp)
+        @Html.ValidationMessageFor(m => m.Empresa_Transp)
+    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(m => m.CNPJ_Transp)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(m => m.CNPJ_Transp)
-            @Html.ValidationMessageFor(m => m.CNPJ_Transp)
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Duracao_Transp)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Duracao_Transp)
+        @Html.ValidationMessageFor(m => m.Duracao_Transp)
+    </div>
 
-        <div>
-            <br><input type="submit" value="Enviar" />
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.CNPJ_Transp)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.CNPJ_Transp)
+        @Html.ValidationMessageFor(m => m.CNPJ_Transp)
+    </div>
 
-    </fieldset>
+    <div>
+        <br><input type="submit" value="Enviar" />
+    </div>
+
+</fieldset>
 }
 

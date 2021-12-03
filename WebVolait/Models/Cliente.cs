@@ -18,6 +18,10 @@ namespace WebVolait.Models
         [StringLength(30, MinimumLength = 2, ErrorMessage = "*O campo permite apenas 2 a 30 caracteres")]
         public string Nome_Cli { get; set; }
 
+        [Display(Name = "Nome Social")]        
+        [StringLength(30, MinimumLength = 2, ErrorMessage = "*O campo permite apenas 2 a 30 caracteres")]
+        public string NomeSocial_Cli { get; set; }
+
         [Display(Name = "CPF")]
         [Required(ErrorMessage = "*O campo CPF é obrigatório")]
         [StringLength(15, MinimumLength = 11, ErrorMessage = "*CPF inválido")]

@@ -29,6 +29,9 @@ namespace WebVolait.Models
         [Range(1, 10, ErrorMessage = "*Código inválido")]
         public int Cod_TipoTransp { get; set; }
 
-        // DURACAO FALTANDO
+        [Display(Name = "Duração do transporte")]
+        [Required(ErrorMessage = "*O campo duração do transporte é obrigatório")]
+        [Range(1, 10, ErrorMessage = "*Duração do transporte inválido")]
+        public int Duracao_Transp { get; set; }
     }
 }

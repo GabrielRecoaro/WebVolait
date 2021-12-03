@@ -33,6 +33,11 @@ namespace WebVolait.Models
         [StringLength(14, MinimumLength = 9, ErrorMessage = "*CNPJ inválido")]
         public string CNPJ_Passeio { get; set; }
 
+        [Display(Name = "Duração do passeio")]
+        [Required(ErrorMessage = "*O campo duração do passeio é obrigatório")]
+        [Range(1, 10, ErrorMessage = "*Duração do passeio inválido")]
+        public int Duracao_Passeio { get; set; }
+
         // DURACAO FALTANDO
 
     }

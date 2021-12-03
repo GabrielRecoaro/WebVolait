@@ -9,45 +9,53 @@
 {
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend> Cadastro de Vendas </legend>
+<fieldset>
+    <legend> Cadastro de Vendas </legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(m => m.NotaFiscal)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(m => m.NotaFiscal)
-            @Html.ValidationMessageFor(m => m.NotaFiscal)
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.NotaFiscal)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.NotaFiscal)
+        @Html.ValidationMessageFor(m => m.NotaFiscal)
+    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(m => m.Cod_TipoPagto)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(m => m.Cod_TipoPagto)
-            @Html.ValidationMessageFor(m => m.Cod_TipoPagto)
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Data_Venda)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Data_Venda)
+        @Html.ValidationMessageFor(m => m.Data_Venda)
+    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(m => m.Cod_Func)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(m => m.Cod_Func)
-            @Html.ValidationMessageFor(m => m.Cod_Func)
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Cod_TipoPagto)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Cod_TipoPagto)
+        @Html.ValidationMessageFor(m => m.Cod_TipoPagto)
+    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(m => m.Cod_Cli)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(m => m.Cod_Cli)
-            @Html.ValidationMessageFor(m => m.Cod_Cli)
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Cod_Func)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Cod_Func)
+        @Html.ValidationMessageFor(m => m.Cod_Func)
+    </div>
 
-        <div>
-            <br><input type="submit" value="Enviar" />
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Cod_Cli)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Cod_Cli)
+        @Html.ValidationMessageFor(m => m.Cod_Cli)
+    </div>
 
-    </fieldset>
+    <div>
+        <br><input type="submit" value="Enviar" />
+    </div>
+
+</fieldset>
 }
 

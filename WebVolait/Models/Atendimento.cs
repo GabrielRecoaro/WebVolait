@@ -28,6 +28,25 @@ namespace WebVolait.Models
         [Range(1, 4, ErrorMessage = "*Código inválido")]
         public int Cod_Func { get; set; }
 
-        // DATA HORA FALTANDO 
+        [Display(Name = "Data Atendimento")]
+        [Required(ErrorMessage = "*A data de atendimento é obrigatória")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime DataHora_Atend
+        {
+            get
+            {
+                return this.dataHora_Atend.HasValue
+                    ? this.dataHora_Atend.Value
+                    : DateTime.Now;
+            }
+            set
+            {
+                this.dataHora_Atend = value;
+            }
+
+
+        }
+
+        private DateTime? dataHora_Atend = null;
     }
 }

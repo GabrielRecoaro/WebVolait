@@ -9,47 +9,55 @@
 {
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend> Cadastro de Clientes </legend>
+<fieldset>
+    <legend> Cadastro de Clientes </legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(m => m.Nome_Cli)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(m => m.Nome_Cli)
-            @Html.ValidationMessageFor(m => m.Nome_Cli)
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Nome_Cli)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Nome_Cli)
+        @Html.ValidationMessageFor(m => m.Nome_Cli)
+    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(m => m.CPF_Cli)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(m => m.CPF_Cli)
-            @Html.ValidationMessageFor(m => m.CPF_Cli)
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.NomeSocial_Cli)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.NomeSocial_Cli)
+        @Html.ValidationMessageFor(m => m.NomeSocial_Cli)
+    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(m => m.Email_Cli)
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.CPF_Cli)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.CPF_Cli)
+        @Html.ValidationMessageFor(m => m.CPF_Cli)
+    </div>
 
-        <div class="editor-field">
-            @Html.EditorFor(m => m.Email_Cli)
-            @Html.ValidationMessageFor(m => m.Email_Cli)
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Email_Cli)
+    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(m => m.Telefone_Cli)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(m => m.Telefone_Cli)
-            @Html.ValidationMessageFor(m => m.Telefone_Cli)
-        </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Email_Cli)
+        @Html.ValidationMessageFor(m => m.Email_Cli)
+    </div>
 
-        <div>
-            <br><input type="submit" value="Enviar" />
-        </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Telefone_Cli)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Telefone_Cli)
+        @Html.ValidationMessageFor(m => m.Telefone_Cli)
+    </div>
 
-    </fieldset>
+    <div>
+        <br><input type="submit" value="Enviar" />
+    </div>
+
+</fieldset>
 }
 
 

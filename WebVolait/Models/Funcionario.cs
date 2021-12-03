@@ -18,6 +18,11 @@ namespace WebVolait.Models
         [StringLength(50, MinimumLength = 3, ErrorMessage = "*O campo permite apenas 3 a 50 caracteres")]
         public string NomeCompleto_Func { get; set; }
 
+        [Display(Name = "Nome Social")]
+        
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "*O campo permite apenas 3 a 50 caracteres")]
+        public string NomeSocial_Func { get; set; }
+
         [Display(Name = "CPF")]
         [Required(ErrorMessage = "*O campo CPF é obrigatório")]
         [StringLength(14, MinimumLength = 9, ErrorMessage = "*CPF inválido")]
@@ -27,6 +32,11 @@ namespace WebVolait.Models
         [RegularExpression(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", ErrorMessage = "*E-mail em formato inválido.")]
         [Required(ErrorMessage = "*O campo E-mail é obrigatório")]
         public string Email_Func { get; set; }
+
+        [Display(Name = "Senha")]
+        [Required(ErrorMessage = "*O campo senha é obrigatório")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "*O campo permite apenas 3 a 50 caracteres")]
+        public string Senha_Func { get; set; }
 
         [Display(Name = "Telefone")]
         [Required(ErrorMessage = "*O campo telefone é obrigatório")]

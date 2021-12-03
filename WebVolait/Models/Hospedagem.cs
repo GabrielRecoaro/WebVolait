@@ -28,6 +28,11 @@ namespace WebVolait.Models
         [Range(1, 10, ErrorMessage = "*Código inválido")]
         public int Cod_TipoHosp { get; set; }
 
+        [Display(Name = "Número de diárias")]
+        [Required(ErrorMessage = "*O campo número de diárias é obrigatório")]
+        [Range(1, 10, ErrorMessage = "*Número de diárias inválido")]
+        public int NumDiarias_Hosp { get; set; }
+
         //NUM DIARIAS FALTANDO
     }
 }
