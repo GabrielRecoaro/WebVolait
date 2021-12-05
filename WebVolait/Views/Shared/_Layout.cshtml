@@ -8,6 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -21,18 +22,55 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Cliente", "Index", "Cliente")</li>
-                    <li>@Html.ActionLink("Atendimento", "Index", "Atendimento")</li>
-                    <li>@Html.ActionLink("Funcionario", "Index", "Funcionario")</li>
-                    <li>@Html.ActionLink("Hospedagem", "Index", "Hospedagem")</li>
-                    <li>@Html.ActionLink("Pacote", "Index", "Pacote")</li>
-                    <li>@Html.ActionLink("Passeio", "Index", "Passeio")</li>
-                    <li>@Html.ActionLink("Transporte", "Index", "Transporte")</li>
-                    <li>@Html.ActionLink("Venda", "Index", "Venda")</li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Cadastros
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item">
+
+                                @Html.ActionLink("Funcionario", "Index", "Funcionario")</p>
+                                <p>@Html.ActionLink("Cliente", "Index", "Cliente")</p>
+                                <p>@Html.ActionLink("Atendimento", "Index", "Atendimento")</p>
+                                <p>@Html.ActionLink("Hospedagem", "Index", "Hospedagem")</p>
+                                <p>@Html.ActionLink("Pacote", "Index", "Pacote")</p>
+                                <p>@Html.ActionLink("Passeio", "Index", "Passeio")</p>
+                                <p>@Html.ActionLink("Venda", "Index", "Venda")</p>
+                                <p>@Html.ActionLink("Transporte", "Index", "Transporte")</p>
+                                <p>@Html.ActionLink("Venda", "Index", "Venda")</p>
+                                <p>@Html.ActionLink("Transporte", "Index", "Transporte")</p>
+                                <p>@Html.ActionLink("Passeio", "Index", "Passeio")</p>
+                            </a>
+                        </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Listagem
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item">
+
+                                @Html.ActionLink("Funcionario", "Index", "Funcionario")</p>
+                                <p>@Html.ActionLink("Cliente", "Index", "Cliente")</p>
+                                <p>@Html.ActionLink("Atendimento", "Index", "Atendimento")</p>
+                                <p>@Html.ActionLink("Hospedagem", "Index", "Hospedagem")</p>
+                                <p>@Html.ActionLink("Pacote", "Index", "Pacote")</p>
+                                <p>@Html.ActionLink("Passeio", "Index", "Passeio")</p>
+                                <p>@Html.ActionLink("Venda", "Index", "Venda")</p>
+                                <p>@Html.ActionLink("Transporte", "Index", "Transporte")</p>
+                                <p>@Html.ActionLink("Venda", "Index", "Venda")</p>
+                                <p>@Html.ActionLink("Transporte", "Index", "Transporte")</p>
+                                <p>@Html.ActionLink("Passeio", "Index", "Passeio")</p>
+                            </a>
+                        </div>
+                    </li>
+
+
                 </ul>
             </div>
         </div>
     </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
