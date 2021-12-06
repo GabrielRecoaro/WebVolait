@@ -21,7 +21,7 @@ namespace WebVolait.Models
         [Display(Name = "Descrição")]
         [Required(ErrorMessage = "*O campo descrição é obrigatório")]
         [StringLength(300, MinimumLength = 10, ErrorMessage = "*O campo permite apenas 10 a 300 caracteres")]
-        public string Desc_Atent { get; set; }
+        public string Desc_Atend { get; set; }
 
         [Display(Name = "Código")]
         [Required(ErrorMessage = "*O campo código é obrigatório")]
