@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+</head>
+<body>
+    <div class="container"> 
+        <form>
+            <h2>Login Here</h2>
+            <div class="form-group">
+                <label for=" txtName" class="control-label col-sm-3"> User Name</label>
+                <div class="col-sm-3">
+                    <input type="text" name="txtName" class=" form-control"/>
+                    <span class="text-danger">Name Required</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for=" txtPassoword" class="control-label col-sm-3">Password</label>
+                <div class="col-sm-3">
+                    <input type="password" name = "txtPassword" class="form-control"/>
+                </div>
+                <span class="text-danger">Password </span>
+            </div>
+            <div class="form-group col-sm-3">
+                <button class="btn btn-lg btn-block btn-primary">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
