@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebVolait.Models
 {
-    public class Login
+    public class LoginViewModel
     {
         [Display(Name = "Nome")]
         [Required(ErrorMessage = "*O campo é obrigatório")]

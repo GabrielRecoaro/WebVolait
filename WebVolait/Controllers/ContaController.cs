@@ -13,13 +13,14 @@ namespace WebVolait.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
-            ViewBag.returnUrl = returnUrl;
+            ViewBag.ReturnUrl = returnUrl;
             return View();
         }
 
         [HttpPost]
+        [AllowAnonymous]
 
-        public ActionResult Login(Login login, string returnUrl)
+        public ActionResult Login(LoginViewModel login, string returnUrl)
         {
             if (!ModelState.IsValid)
             {
