@@ -11,131 +11,77 @@
 </head>
 <body>
 
-    <!--
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Volait", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #F85F00">
+        <a class="navbar-brand" href="@Url.Content("~/Home/Index")">Volait</a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            @if (Request.IsAuthenticated)
+            {
+
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link active" aria-current="page" href="@Url.Content("~/Home/Index")">Home</a>
+                    </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Cadastros
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="@Url.Content("~/Atendimento/Index")">Atendimento</a></li>
+                            <li><a class="dropdown-item" href="@Url.Content("~/Cliente/Index")">Cliente</a></li>
+                            <li><a class="dropdown-item" href="@Url.Content("~/Funcionario/Index")">Funcionario</a></li>
+                            <li><a class="dropdown-item" href="@Url.Content("~/Hospedagem/Index")">Hospedagem</a></li>
+                            <li><a class="dropdown-item" href="@Url.Content("~/Pacote/Index")">Pacote</a></li>
+                            <li><a class="dropdown-item" href="@Url.Content("~/Passeio/Index")">Passeio</a></li>
+                            <li><a class="dropdown-item" href="@Url.Content("~/Transporte/Index")">Transporte</a></li>
+                            <li><a class="dropdown-item" href="@Url.Content("~/Venda/Index")">Venda</a></li>
+                        </ul>
+                    </li>
 
-                                @Html.ActionLink("Funcionario", "Index", "Funcionario")</p>
-                                <p>@Html.ActionLink("Cliente", "Index", "Cliente")</p>
-                                <p>@Html.ActionLink("Atendimento", "Index", "Atendimento")</p>
-                                <p>@Html.ActionLink("Hospedagem", "Index", "Hospedagem")</p>
-                                <p>@Html.ActionLink("Pacote", "Index", "Pacote")</p>
-                                <p>@Html.ActionLink("Passeio", "Index", "Passeio")</p>
-                                <p>@Html.ActionLink("Venda", "Index", "Venda")</p>
-                                <p>@Html.ActionLink("Transporte", "Index", "Transporte")</p>
-                                <p>@Html.ActionLink("Venda", "Index", "Venda")</p>
-                                <p>@Html.ActionLink("Transporte", "Index", "Transporte")</p>
-                                <p>@Html.ActionLink("Passeio", "Index", "Passeio")</p>
-                            </a>
-                        </div>
-                        </li>
-                        <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Listagem
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item">
 
-                                @Html.ActionLink("Funcionario", "Index", "Funcionario")</p>
-                                <p>@Html.ActionLink("Cliente", "Index", "Cliente")</p>
-                                <p>@Html.ActionLink("Atendimento", "Index", "Atendimento")</p>
-                                <p>@Html.ActionLink("Hospedagem", "Index", "Hospedagem")</p>
-                                <p>@Html.ActionLink("Pacote", "Index", "Pacote")</p>
-                                <p>@Html.ActionLink("Passeio", "Index", "Passeio")</p>
-                                <p>@Html.ActionLink("Venda", "Index", "Venda")</p>
-                                <p>@Html.ActionLink("Transporte", "Index", "Transporte")</p>
-                                <p>@Html.ActionLink("Venda", "Index", "Venda")</p>
-                                <p>@Html.ActionLink("Transporte", "Index", "Transporte")</p>
-                                <p>@Html.ActionLink("Passeio", "Index", "Passeio")</p>
-                            </a>
-                        </div>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="@Url.Content("~/Atendimento/Index")">Atendimento</a></li>
+                            <li><a class="dropdown-item" href="@Url.Content("~/Cliente/Index")">Cliente</a></li>
+                            <li><a class="dropdown-item" href="@Url.Content("~/Funcionario/Index")">Funcionario</a></li>
+                            <li><a class="dropdown-item" href="@Url.Content("~/Hospedagem/Index")">Hospedagem</a></li>
+                            <li><a class="dropdown-item" href="@Url.Content("~/Pacote/Index")">Pacote</a></li>
+                            <li><a class="dropdown-item" href="@Url.Content("~/Passeio/Index")">Passeio</a></li>
+                            <li><a class="dropdown-item" href="@Url.Content("~/Transporte/Index")">Transporte</a></li>
+                            <li><a class="dropdown-item" href="@Url.Content("~/Venda/Index")">Venda</a></li>
+                        </ul>
+
                     </li>
-
-
                 </ul>
-            </div>
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li><a href="#">Olá @User.Identity.Name</a></li>
+                    @using (Html.BeginForm("LogOff", "Conta", FormMethod.Post, new { id = "logoffForm" }))
+                    {
+                        <li><a href="javascript:document.getElementById('logoffForm').submit()">Sair</a></li>
+                    }
+                </ul>
+
+            }
+            else
+            {
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Login", "Login", "Conta")</li>
+                </ul>
+            }
+
         </div>
-    </div>
-        -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #F85F00">  
-        <a class="navbar-brand" href="@Url.Content("~/Home/Index")">Volait</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link active" aria-current="page" href="@Url.Content("~/Home/Index")">Home</a>
-                </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Cadastros
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="@Url.Content("~/Atendimento/Index")">Atendimento</a></li>
-                        <li><a class="dropdown-item" href="@Url.Content("~/Cliente/Index")">Cliente</a></li>
-                        <li><a class="dropdown-item" href="@Url.Content("~/Funcionario/Index")">Funcionario</a></li>
-                        <li><a class="dropdown-item" href="@Url.Content("~/Hospedagem/Index")">Hospedagem</a></li>
-                        <li><a class="dropdown-item" href="@Url.Content("~/Pacote/Index")">Pacote</a></li>
-                        <li><a class="dropdown-item" href="@Url.Content("~/Passeio/Index")">Passeio</a></li>
-                        <li><a class="dropdown-item" href="@Url.Content("~/Transporte/Index")">Transporte</a></li>
-                        <li><a class="dropdown-item" href="@Url.Content("~/Venda/Index")">Venda</a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Listagem
-                    </a>
-
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="@Url.Content("~/Atendimento/Index")">Atendimento</a></li>
-                        <li><a class="dropdown-item" href="@Url.Content("~/Cliente/Index")">Cliente</a></li>
-                        <li><a class="dropdown-item" href="@Url.Content("~/Funcionario/Index")">Funcionario</a></li>
-                        <li><a class="dropdown-item" href="@Url.Content("~/Hospedagem/Index")">Hospedagem</a></li>
-                        <li><a class="dropdown-item" href="@Url.Content("~/Pacote/Index")">Pacote</a></li>
-                        <li><a class="dropdown-item" href="@Url.Content("~/Passeio/Index")">Passeio</a></li>
-                        <li><a class="dropdown-item" href="@Url.Content("~/Transporte/Index")">Transporte</a></li>
-                        <li><a class="dropdown-item" href="@Url.Content("~/Venda/Index")">Venda</a></li>
-                    </ul>
-
-                    @*<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item">
-
-                @Html.ActionLink("Funcionario", "Index", "Funcionario")</p>
-                <p>@Html.ActionLink("Cliente", "Index", "Cliente")</p>
-                <p>@Html.ActionLink("Atendimento", "Index", "Atendimento")</p>
-                <p>@Html.ActionLink("Hospedagem", "Index", "Hospedagem")</p>
-                <p>@Html.ActionLink("Pacote", "Index", "Pacote")</p>
-                <p>@Html.ActionLink("Passeio", "Index", "Passeio")</p>
-                <p>@Html.ActionLink("Venda", "Index", "Venda")</p>
-                <p>@Html.ActionLink("Transporte", "Index", "Transporte")</p>
-                <p>@Html.ActionLink("Venda", "Index", "Venda")</p>
-                <p>@Html.ActionLink("Transporte", "Index", "Transporte")</p>
-                <p>@Html.ActionLink("Passeio", "Index", "Passeio")</p>
-            </a>
-        </div>*@
-                </li>
-            </ul>
-        </div>
     </nav>
     <div class="container body-content">
         @RenderBody()

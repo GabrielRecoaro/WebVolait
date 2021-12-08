@@ -8,16 +8,16 @@ namespace WebVolait.Models
 {
     public class LoginViewModel
     {
-        [Display(Name = "Nome")]
-        [Required(ErrorMessage = "*O campo é obrigatório")]
+        [Required(ErrorMessage = "Informe o usuário")]
+        [Display(Name = "Usuário:")]
         public string Usuario { get; set; }
 
-        [Display(Name = "Senha")]
-        [Required(ErrorMessage = "*O campo nome é obrigatório")]
+        [Required(ErrorMessage = "Informe a senha")]
+        [DataType(DataType.Password)]
+        [Display(Name = "Senha:")]
         public string Senha { get; set; }
 
-        [Display(Name = "Descrição")]
-        [Required(ErrorMessage = "*O campo descrição é obrigatório")]
-        public bool LembraMe { get; set; }
+        [Display(Name = "Lembrar Me")]
+        public bool LembrarMe { get; set; }
     }
 }

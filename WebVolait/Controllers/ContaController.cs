@@ -10,7 +10,7 @@ namespace WebVolait.Controllers
 {
     public class ContaController : Controller
     {
-        
+        [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
@@ -18,21 +18,19 @@ namespace WebVolait.Controllers
         }
 
         [HttpPost]
-
-
+        [AllowAnonymous]
         public ActionResult Login(LoginViewModel login, string returnUrl)
         {
             if (!ModelState.IsValid)
             {
                 return View(login);
-
             }
 
-            var achou = (login.Usuario == "adm" && login.Senha == "123");
+            var entrar = (login.Usuario == "admin" && login.Senha == "123");
 
-            if (achou)
+            if (entrar)
             {
-                FormsAuthentication.SetAuthCookie(login.Usuario, login.LembraMe);
+                FormsAuthentication.SetAuthCookie(login.Usuario, login.LembrarMe);
                 if (Url.IsLocalUrl(returnUrl))
                 {
                     return Redirect(returnUrl);
@@ -44,11 +42,19 @@ namespace WebVolait.Controllers
             }
             else
             {
-                ModelState.AddModelError("", "Login Inválido");
+                ModelState.AddModelError("", "Login inválido.");
             }
 
             return View(login);
         }
 
+        [HttpPost]
+        [AllowAnonymous]
+        public ActionResult LogOff()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Home");
+        }
     }
+
 }
