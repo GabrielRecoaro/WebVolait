@@ -10,12 +10,12 @@ namespace WebVolait.Controllers
 {
     public class TransporteController : Controller
     {
-        // GET: Transporte
+        [Authorize]
         public ActionResult Index()
         {
             return View();
         }
-
+        [Authorize]
         public ActionResult Transporte()
         {
             var transporte = new Transporte();

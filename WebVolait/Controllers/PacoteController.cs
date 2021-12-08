@@ -10,12 +10,12 @@ namespace WebVolait.Controllers
 {
     public class PacoteController : Controller
     {
-        // GET: Pacote
+        [Authorize]
         public ActionResult Index()
         {
             return View();
         }
-
+        [Authorize]
         public ActionResult Pacote()
         {
             var pacote = new Pacote();

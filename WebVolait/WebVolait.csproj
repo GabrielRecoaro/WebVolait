@@ -128,7 +128,7 @@
     <Compile Include="Controllers\HospedagemController.cs" />
     <Compile Include="Controllers\Item_PacoteController.cs" />
     <Compile Include="Controllers\Item_VendaController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ContaController.cs" />
     <Compile Include="Controllers\PacoteController.cs" />
     <Compile Include="Controllers\PasseioController.cs" />
     <Compile Include="Controllers\Tipo_HospController.cs" />
@@ -145,6 +145,7 @@
     <Compile Include="Models\Hospedagem.cs" />
     <Compile Include="Models\Item_Pacote.cs" />
     <Compile Include="Models\Item_Venda.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Pacote.cs" />
     <Compile Include="Models\Passeio.cs" />
     <Compile Include="Models\Tipo_Hosp.cs" />
@@ -198,7 +199,7 @@
     <Content Include="Views\Passeio\Index.cshtml" />
     <Content Include="Views\Transporte\Index.cshtml" />
     <Content Include="Views\Venda\Index.cshtml" />
-    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Conta\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

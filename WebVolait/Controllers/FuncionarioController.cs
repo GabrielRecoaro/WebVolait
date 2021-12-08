@@ -10,12 +10,12 @@ namespace WebVolait.Controllers
 {
     public class FuncionarioController : Controller
     {
-        // GET: Funcionario
+        [Authorize]
         public ActionResult Index()
         {
             return View();
         }
-
+        [Authorize]
         public ActionResult Funcionario()
         {
             var funcionario = new Funcionario();

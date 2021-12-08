@@ -10,12 +10,12 @@ namespace WebVolait.Controllers
 {
     public class PasseioController : Controller
     {
-        // GET: Passeio
+        [Authorize]
         public ActionResult Index()
         {
             return View();
         }
-
+        [Authorize]
         public ActionResult Passeio()
         {
             var passeio = new Passeio();

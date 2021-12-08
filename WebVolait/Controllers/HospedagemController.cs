@@ -10,12 +10,12 @@ namespace WebVolait.Controllers
 {
     public class HospedagemController : Controller
     {
-        // GET: Hospedagem
+        [Authorize]
         public ActionResult Index()
         {
             return View();
         }
-
+        [Authorize]
         public ActionResult Hospedagem()
         {
             var hospedagem = new Hospedagem();
