@@ -10,12 +10,12 @@ namespace WebVolait.Controllers
 {
     public class VendaController : Controller
     {
-        [Authorize]
+        
         public ActionResult Index()
         {
             return View();
         }
-        [Authorize]
+     
         public ActionResult Venda()
         {
             var venda = new Venda();

@@ -10,13 +10,13 @@ namespace WebVolait.Controllers
 {
     public class AtendimentoController : Controller
     {
-        [Authorize]
+        
         public ActionResult Index()
         {
             return View();
         }
 
-        [Authorize]
+        
         public ActionResult Atendimento()
         {
             var atendimento = new Atendimento();

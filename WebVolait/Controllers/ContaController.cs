@@ -10,7 +10,7 @@ namespace WebVolait.Controllers
 {
     public class ContaController : Controller
     {
-        [AllowAnonymous]
+        
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
@@ -18,7 +18,7 @@ namespace WebVolait.Controllers
         }
 
         [HttpPost]
-        [AllowAnonymous]
+
 
         public ActionResult Login(LoginViewModel login, string returnUrl)
         {
