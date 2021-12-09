@@ -27,7 +27,7 @@ namespace WebVolait.Controllers
          Acoes ac = new Acoes();
         [HttpPost]
 
-
+        
         public ActionResult Atendimento(Atendimento atendimento)
         {
             try
@@ -44,8 +44,8 @@ namespace WebVolait.Controllers
                 return RedirectToAction("Atendimento");
             }
         }
-
-       public ActionResult ListarAtendimento(Atendimento atendimento)
+        
+        public ActionResult ListarAtendimento(Atendimento atendimento)
        {
            var ExibirAtendimento = new Acoes();
            var TodosAtendimento = ExibirAtendimento.ListarAtendimento();
