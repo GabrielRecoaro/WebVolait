@@ -9,7 +9,7 @@ namespace WebVolait.Repositorio
 {
     public class Conexao
     {
-        MySqlConnection cn = new MySqlConnection("Server=localhost;DataBase=db_volait;user=dbvolait;pwd=12345");
+        MySqlConnection cn = new MySqlConnection("Server=localhost;DataBase=db_VolaitData;user=adm;pwd=12345");
         public static string msg;
 
         public MySqlConnection ConectarBD()

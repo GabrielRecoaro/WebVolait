@@ -8,10 +8,6 @@ namespace WebVolait.Models
 {
     public class Funcionario
     {
-        [Display(Name = "Código")]
-        [Required(ErrorMessage = "*O campo código é obrigatório")]
-        [Range(1, 4, ErrorMessage = "*Código inválido")]
-        public int Cod_Func { get; set; }
 
         [Display(Name = "Nome")]
         [Required(ErrorMessage = "*O campo nome é obrigatório")]

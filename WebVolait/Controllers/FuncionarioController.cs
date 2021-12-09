@@ -20,7 +20,7 @@ namespace WebVolait.Controllers
         {
             var funcionario = new Funcionario();
             return View(funcionario);
-        }/*
+        }
 
         Acoes ac = new Acoes();
 
@@ -49,7 +49,7 @@ namespace WebVolait.Controllers
             var TodosFunc = ExibirFunc.ListarFuncionario();
             return View(TodosFunc);
 
-        }*/
+        }
 
     }
 }
