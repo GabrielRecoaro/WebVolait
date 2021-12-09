@@ -342,6 +342,63 @@ from tb_venda inner join tb_itemvenda on tb_venda.NotaFiscal = tb_itemvenda.Nota
               inner join tb_cliente on tb_venda.CPF_Cli = tb_cliente.CPF_Cli
               inner join tb_tipopagto on tb_venda.Cod_TipoPagto = tb_tipopagto.Cod_TipoPagto;
               
+use db_VolaitData;
+drop view vw_venda;
+
+create view vw_venda
+as select
+	tb_venda.NotaFiscal,
+    tb_venda.Data_Venda,
+    tb_venda.Valor_Venda,
+    tb_funcionario.NomeCompleto_Func,
+    tb_funcionario.CPF_Func,
+    tb_cliente.NomeCompleto_Cli,
+    tb_cliente.CPF_Cli,
+    tb_tipopagto.Tipo_Pagto,
+    tb_itemvenda.Cod_ItemVenda,
+    tb_itemvenda.Qtd_ItemVenda,
+    tb_itemvenda.Valor_ItemVenda,
+    tb_pacote.Nome_Pacote,
+    tb_pacote.Desc_Pacote,
+    tb_pacote.Destino_Pacote,
+    tb_pacote.Valor_Pacote
+from tb_venda inner join tb_itemvenda on tb_venda.NotaFiscal = tb_itemvenda.NotaFiscal 
+			  inner join tb_pacote on tb_itemvenda.Cod_Pacote = tb_pacote.Cod_Pacote
+              inner join tb_funcionario on tb_venda.CPF_Func = tb_funcionario.CPF_Func
+              inner join tb_cliente on tb_venda.CPF_Cli = tb_cliente.CPF_Cli
+              inner join tb_tipopagto on tb_venda.Cod_TipoPagto = tb_tipopagto.Cod_TipoPagto;
+              
+drop view vw_venda;
+
+create view vw_venda
+as select
+	tb_venda.NotaFiscal,
+    tb_venda.Data_Venda,
+    tb_venda.Valor_Venda,
+    tb_funcionario.NomeCompleto_Func,
+    tb_funcionario.CPF_Func,
+    tb_cliente.NomeCompleto_Cli,
+    tb_cliente.CPF_Cli,
+    tb_tipopagto.Cod_TipoPagto,
+    tb_tipopagto.Tipo_Pagto,
+    tb_itemvenda.Cod_ItemVenda,
+    tb_itemvenda.Qtd_ItemVenda,
+    tb_itemvenda.Valor_ItemVenda,
+    tb_pacote.Cod_Pacote,
+    tb_pacote.Nome_Pacote,
+    tb_pacote.Desc_Pacote,
+    tb_pacote.Destino_Pacote,
+    tb_pacote.Valor_Pacote
+from tb_venda inner join tb_itemvenda on tb_venda.NotaFiscal = tb_itemvenda.NotaFiscal 
+			  inner join tb_pacote on tb_itemvenda.Cod_Pacote = tb_pacote.Cod_Pacote
+              inner join tb_funcionario on tb_venda.CPF_Func = tb_funcionario.CPF_Func
+              inner join tb_cliente on tb_venda.CPF_Cli = tb_cliente.CPF_Cli
+              inner join tb_tipopagto on tb_venda.Cod_TipoPagto = tb_tipopagto.Cod_TipoPagto;
+              
+select * from vw_venda;
+              
+select * from vw_venda;
+              
 select * from vw_venda;
 
 select * from tb_funcionario;
