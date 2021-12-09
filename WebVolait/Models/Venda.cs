@@ -10,7 +10,7 @@ namespace WebVolait.Models
     {
         [Display(Name = "Nota Fiscal")]
         [Required(ErrorMessage = "*O campo nota fiscal é obrigatório")]
-        [StringLength(15, MinimumLength = 11, ErrorMessage = "*Nota fiscal inválido")]
+        //[StringLength(15, MinimumLength = 11, ErrorMessage = "*Nota fiscal inválido")]
         public string NotaFiscal { get; set; }
 
         [Display(Name = "Data de venda")]
@@ -37,20 +37,20 @@ namespace WebVolait.Models
     
         [Display(Name = "Código do tipo de pagamento")]
         [Required(ErrorMessage = "*O campo código é obrigatório")]
-        [Range(1, 4, ErrorMessage = "*Código inválido")]
+        //[Range(1, 4, ErrorMessage = "*Código inválido")]
         public int Cod_TipoPagto { get; set; }
 
         [Display(Name = "Nome do funcionário")]
-        [Required(ErrorMessage = "*O campo código é obrigatório")]
+        //[Required(ErrorMessage = "*O campo código é obrigatório")]
         public string CPF_Func { get; set; }
 
         [Display(Name = "Nome do cliente")]
-        [Required(ErrorMessage = "*O campo código é obrigatório")]
+        //[Required(ErrorMessage = "*O campo código é obrigatório")]
         public string CPF_Cli { get; set; }
         
         [Display(Name = "Valor da venda")]
         [Required(ErrorMessage = "*O campo código é obrigatório")]
-        [Range(1, 4, ErrorMessage = "*Código inválido")]
+        //[Range(1, 4, ErrorMessage = "*Código inválido")]
         public decimal Valor_Venda { get; set; }
 
     }

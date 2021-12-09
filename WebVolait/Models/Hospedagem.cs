@@ -10,27 +10,27 @@ namespace WebVolait.Models
     {
         [Display(Name = "Código")]
         [Required(ErrorMessage = "*O campo código é obrigatório")]
-        [Range(1, 10, ErrorMessage = "*Código inválido")]
+        //[Range(1, 10, ErrorMessage = "*Código inválido")]
         public int Cod_Hosp { get; set; }
 
         [Display(Name = "Nome")]
         [Required(ErrorMessage = "*O campo nome é obrigatório")]
-        [StringLength(30, MinimumLength = 2, ErrorMessage = "*O campo nome permite apenas 2 a 30 caracteres")]
+        //[StringLength(30, MinimumLength = 2, ErrorMessage = "*O campo nome permite apenas 2 a 30 caracteres")]
         public string Nome_Hosp { get; set; }
 
         [Display(Name = "CNPJ")]
         [Required(ErrorMessage = "*O campo CNPJ é obrigatório")]
-        [StringLength(14, MinimumLength = 9, ErrorMessage = "*CNPJ inválido")]
+        //[StringLength(14, MinimumLength = 9, ErrorMessage = "*CNPJ inválido")]
         public string CNPJ_Hosp { get; set; }
 
         [Display(Name = "Código do tipo de hospedagem")]
         [Required(ErrorMessage = "*O campo código é obrigatório")]
-        [Range(1, 10, ErrorMessage = "*Código inválido")]
+        //[Range(1, 10, ErrorMessage = "*Código inválido")]
         public int Cod_TipoHosp { get; set; }
 
         [Display(Name = "Número de diárias")]
         [Required(ErrorMessage = "*O campo número de diárias é obrigatório")]
-        [Range(1, 10, ErrorMessage = "*Número de diárias inválido")]
+        //[Range(1, 10, ErrorMessage = "*Número de diárias inválido")]
         public int NumDiarias_Hosp { get; set; }
 
         //NUM DIARIAS FALTANDO

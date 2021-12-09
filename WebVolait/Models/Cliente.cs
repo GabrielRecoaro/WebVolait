@@ -10,21 +10,21 @@ namespace WebVolait.Models
     {
         [Display(Name = "Código")]
         [Required(ErrorMessage = "*O campo código é obrigatório")]
-        [Range(1, 4, ErrorMessage = "*Código inválido")]
+        //[Range(1, 4, ErrorMessage = "*Código inválido")]
         public int Cod_Cli { get; set; }
 
         [Display(Name = "Nome")]
         [Required(ErrorMessage = "*O campo nome é obrigatório")]
-        [StringLength(30, MinimumLength = 2, ErrorMessage = "*O campo permite apenas 2 a 30 caracteres")]
+        //[StringLength(30, MinimumLength = 2, ErrorMessage = "*O campo permite apenas 2 a 30 caracteres")]
         public string NomeCompleto_Cli { get; set; }
 
         [Display(Name = "Nome Social")]
-        [StringLength(30, MinimumLength = 2, ErrorMessage = "*O campo permite apenas 2 a 30 caracteres")]
+        //[StringLength(30, MinimumLength = 2, ErrorMessage = "*O campo permite apenas 2 a 30 caracteres")]
         public string NomeSocial_Cli { get; set; }
 
         [Display(Name = "CPF")]
         [Required(ErrorMessage = "*O campo CPF é obrigatório")]
-        [StringLength(15, MinimumLength = 11, ErrorMessage = "*CPF inválido")]
+        //[StringLength(15, MinimumLength = 11, ErrorMessage = "*CPF inválido")]
         public string CPF_Cli { get; set; }
 
         [Display(Name = "E-mail")]
@@ -34,7 +34,7 @@ namespace WebVolait.Models
 
         [Display(Name = "Telefone")]
         [Required(ErrorMessage = "*O campo telefone é obrigatório")]
-        [StringLength(20, MinimumLength = 9, ErrorMessage = "*Número de contato inválido")]
+        //[StringLength(20, MinimumLength = 9, ErrorMessage = "*Número de contato inválido")]
         public string Telefone_Cli { get; set; }
 
 
