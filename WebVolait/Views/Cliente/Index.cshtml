@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="~/Content/bootstrap.css" />
 <h2>Novo <b>Cliente</b></h2>
 
-@using (Html.BeginForm("Cliente", "Cliente", FormMethod.Post))
+@using (Html.BeginForm("Cliente","Index", "Cliente", FormMethod.Post))
 {
     @Html.ValidationSummary(true)
 
@@ -15,11 +15,11 @@
     <legend> Cadastro de Clientes </legend>
 
     <div class="editor-label">
-        @Html.LabelFor(m => m.Nome_Cli)
+        @Html.LabelFor(m => m.NomeCompleto_Cli)
     </div>
     <div class="editor-field">
-        @Html.EditorFor(m => m.Nome_Cli)
-        @Html.ValidationMessageFor(m => m.Nome_Cli)
+        @Html.EditorFor(m => m.NomeCompleto_Cli)
+        @Html.ValidationMessageFor(m => m.NomeCompleto_Cli)
     </div>
 
     <div class="editor-label">
