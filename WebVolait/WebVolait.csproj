@@ -204,6 +204,7 @@
     <Content Include="Views\Venda\Index.cshtml" />
     <Content Include="Views\Conta\Login.cshtml" />
     <Content Include="Views\Funcionario\ListarFuncionario.cshtml" />
+    <Content Include="Views\Cliente\ListarCliente.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

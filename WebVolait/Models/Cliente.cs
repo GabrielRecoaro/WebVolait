@@ -16,7 +16,7 @@ namespace WebVolait.Models
         [Display(Name = "Nome")]
         [Required(ErrorMessage = "*O campo nome é obrigatório")]
         [StringLength(30, MinimumLength = 2, ErrorMessage = "*O campo permite apenas 2 a 30 caracteres")]
-        public string Nome_Cli { get; set; }
+        public string NomeCompleto_Cli { get; set; }
 
         [Display(Name = "Nome Social")]        
         [StringLength(30, MinimumLength = 2, ErrorMessage = "*O campo permite apenas 2 a 30 caracteres")]

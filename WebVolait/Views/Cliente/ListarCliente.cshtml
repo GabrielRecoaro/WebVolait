@@ -1,0 +1,66 @@
+﻿@model IEnumerable<WebVolait.Models.Cliente>
+@{
+    ViewBag.Title = "Listar";
+}
+
+<link rel="stylesheet" href="~/Content/bootstrap.css" />
+
+<br /><p>@Html.ActionLink("Novo cliente", "Cliente")</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m => m.NomeCompleto_Cli)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.NomeSocial_Cli)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.CPF_Cli)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.Email_Cli)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.Telefone_Cli)
+        </th>
+        <th></th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCompleto_Cli)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeSocial_Cli)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF_Cli)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Email_Cli)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone_Cli)
+            </td>
+            // MUDAR
+            <td>
+                @Html.ActionLink("Alterar", "AltCliente", null, new { cdCli = item.CPF_Cli }, new { @class = "btn btn-primary btn-xs" })
+                @Html.ActionLink("Deletar", "DelCliente", null, new { cdCli = item.CPF_Cli }, new { @class = "btn btn-danger btn-xs" })
+            </td>
+
+        </tr>
+
+    }
+
+</table>

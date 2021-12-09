@@ -22,7 +22,7 @@ namespace WebVolait.Controllers
             return View(cliente);
         }
 
-        /*
+      
           
          Acoes ac = new Acoes();
         [HttpPost]
@@ -50,7 +50,7 @@ namespace WebVolait.Controllers
            var TodosCliente = ExibirCliente.ListarCliente();
            return View(TodosCliente);
 
-       }*/
+       }
 
     }
 }

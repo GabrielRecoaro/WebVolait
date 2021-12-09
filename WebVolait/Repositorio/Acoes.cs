@@ -89,5 +89,75 @@ namespace WebVolait.Repositorio
             return TodosFuncionarios;
 
         }
+
+        public void CadastrarCliente(Cliente cli)
+        {
+            MySqlCommand cmd = new MySqlCommand("insert into tb_cliente values(@CPF_Cli, @NomeCompleto_Cli, @NomeSocial_Cli, @Email_Cli, @Telefone_Cli)", con.ConectarBD());
+            cmd.Parameters.Add("@CPF_Cli", MySqlDbType.VarChar).Value = cli.CPF_Cli;
+            cmd.Parameters.Add("@NomeCompleto_Cli", MySqlDbType.VarChar).Value = cli.NomeCompleto_Cli;
+            cmd.Parameters.Add("@NomeSocial_Cli", MySqlDbType.VarChar).Value = cli.NomeSocial_Cli;
+            cmd.Parameters.Add("@Email_Cli", MySqlDbType.VarChar).Value = cli.Email_Cli;
+            cmd.Parameters.Add("@Telefone_Cli", MySqlDbType.VarChar).Value = cli.Telefone_Cli;
+            cmd.ExecuteNonQuery();
+            con.DesconectarBD();
+
+        }
+
+        public Cliente ListarCodCliente(int cod)
+        {
+            var comando = String.Format("select * from tb_cliente where CPF_Cli = {0}", cod);
+            MySqlCommand cmd = new MySqlCommand(comando, con.ConectarBD());
+            var DadosCodCli = cmd.ExecuteReader();
+            return ListarCodCli(DadosCodCli).FirstOrDefault();
+        }
+
+        public List<Cliente> ListarCodCli(MySqlDataReader dt)
+        {
+            var AltAl = new List<Cliente>();
+            while (dt.Read())
+            {
+                var AlTemp = new Cliente()
+                {
+                    CPF_Cli = (dt["CPF_Cli"].ToString()),
+                    NomeCompleto_Cli = (dt["NomeCompleto_Cli"].ToString()),
+                    NomeSocial_Cli = (dt["NomeSocial_Cli"].ToString()),
+                    Email_Cli = (dt["Email_Cli"].ToString()),
+                    Telefone_Cli = (dt["Telefone_Cli"].ToString()),
+
+                };
+                AltAl.Add(AlTemp);
+
+            }
+            dt.Close();
+            return AltAl;
+        }
+
+        public List<Cliente> ListarCliente()
+        {
+            MySqlCommand cmd = new MySqlCommand("Select * from tb_cliente", con.ConectarBD());
+            var DadosCliente = cmd.ExecuteReader();
+            return ListarTodosCliente(DadosCliente);
+        }
+
+        public List<Cliente> ListarTodosCliente(MySqlDataReader dt)
+        {
+            var TodosCliente = new List<Cliente>();
+            while (dt.Read())
+            {
+                var ClienteTemp = new Cliente()
+                {
+                    CPF_Cli = (dt["CPF_Cli"].ToString()),
+                    NomeCompleto_Cli = (dt["NomeCompleto_Cli"].ToString()),
+                    NomeSocial_Cli = (dt["NomeSocial_Cli"].ToString()),
+                    Email_Cli = (dt["Email_Cli"].ToString()),
+                    Telefone_Cli = (dt["Telefone_Cli"].ToString()),
+
+                };
+                TodosCliente.Add(ClienteTemp);
+            }
+            dt.Close();
+            return TodosCliente;
+
+        }
     }
 }
