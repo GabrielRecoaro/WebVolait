@@ -214,6 +214,8 @@ insert into tb_passeio values(Default, 'Sesc Pantanal', '33469164033044', 'Pelas
 (Default, 'Rio Tour', '05477693000149', 'Pão de Açúcar', 'Visitação ao morro do Pão de Açúcar e um passeio pelo mais famoso bondinho do Brasil', '2h');
 
 drop table tb_itempasseio;
+drop table tb_itemhosp;
+drop table tb_itemtransp;
 
 alter table tb_itempacote add column Cod_Hosp int, add constraint fk_hosp foreign key(Cod_Hosp) references tb_hospedagem(Cod_Hosp);
 alter table tb_itempacote add column Cod_Transp int, add constraint fk_transp foreign key(Cod_Transp) references tb_transporte(Cod_Transp);
@@ -227,6 +229,9 @@ select * from tb_transporte;
 select * from tb_hospedagem;
 select * from tb_passeio;
 select * from tb_pacote;
+select * from tb_itempacote;
+
+
 
 insert into tb_pacote values(Default, 'Retiro no Pantanal', 'Pacote de 7 diárias para um estadia aventureira e também tranquila no Sesc Pantanal', 'Pantanal - MS', '5567.00');
 insert into tb_pacote values(Default, 'Desbravando o Jalapão', 'Pacote de 4 diárias para conhecer um dos mais belos destinos brasileiros, com estadia na cidade de São Félix do Tocantins', 'Jalapão - TO', '3470.00'),
@@ -239,23 +244,30 @@ insert into tb_hospedagem values(0, 'Não há hospedagem', '00000000000100', 0, 
 insert into tb_transporte values(0, 'Não há transporte', '00000000000100', '0h0min', 1, 'Não há transporte');
 insert into tb_passeio values(0, 'Não há passeio', '00000000000100', 'Não há passeio', 'Não há passeio', '0h0min');
 
+select * from tb_transporte;
+select * from tb_hospedagem;
+select * from tb_passeio;
+select * from tb_pacote;
+select * from tb_itempacote;
+
+select * from tb_passeio;
 /*voos*/
-insert into tb_itempacote values(Default, 10, 1, 58, 1), (Default, 10, 2, 58, 2), (Default, 10, 4, 58, 3), (Default, 10, 5, 58, 4), (Default, 10, 3, 58, 5), (Default, 10, 6, 58, 6);
+insert into tb_itempacote values(Default, 1, 10, 1, 1), (Default, 2, 10, 2, 1), (Default,  3, 10, 4, 1), (Default,  4, 10, 5, 1), (Default,  5, 10, 3, 1), (Default,  6, 10, 17, 1);
 
 /*demais transportes*/
-insert into tb_itempacote values(Default, 10, 7, 58, 1), (Default, 10, 8, 58, 2), (Default, 10, 9, 58, 3), (Default, 10, 10, 58, 4), (Default, 10, 16, 58, 5), (Default, 10, 11, 58, 5), (Default, 10, 12, 58, 5), (Default, 10, 13, 58, 5), (Default, 10, 14, 58, 6);
+insert into tb_itempacote values(Default, 1, 10, 6, 1), (Default, 2, 10, 7, 1), (Default, 3, 10, 8, 1), (Default, 4, 10, 9, 1), (Default, 5, 10, 10, 1), (Default, 5, 10, 11, 1), (Default, 5, 10, 12, 1), (Default, 5, 10, 14, 1), (Default, 6, 10, 13, 1);
 
 /*hospedagens*/
-insert into tb_itempacote values(Default, 1, 15, 58, 1), (Default, 3, 15, 58, 2), (Default, 4, 15, 58, 3), (Default, 2, 15, 58, 4), (Default, 5, 15, 58, 5), (Default, 6, 15, 58, 5), (Default, 7, 15, 58, 5), (Default, 8, 15, 58, 5), (Default, 9, 15, 58, 6);
+insert into tb_itempacote values(Default, 1, 1, 15, 1), (Default, 2, 3, 15, 1), (Default, 3, 4, 15, 1), (Default, 4, 2, 15, 1), (Default, 5, 5, 15, 1), (Default, 5, 6, 15, 1), (Default, 5, 7, 15, 1), (Default, 5, 8, 15, 1), (Default, 6, 9, 15, 1);
 
 /*passeios*/
 insert into tb_itempacote values
-(Default, 10, 15, 39, 1), (Default, 10, 15, 40, 1), (Default, 10, 15, 41, 1),
-(Default, 10, 15, 45, 2), (Default, 10, 15, 46, 2), (Default, 10, 15, 47, 2), 
-(Default, 10, 15, 42, 3), (Default, 10, 15, 43, 3), (Default, 10, 15, 44, 3),
-(Default, 10, 15, 48, 4), (Default, 10, 15, 49, 4), (Default, 10, 15, 50, 4),
-(Default, 10, 15, 51, 5), (Default, 10, 15, 52, 5), (Default, 10, 15, 53, 5), (Default, 10, 15, 54, 5), 
-(Default, 10, 15, 55, 6), (Default, 10, 15, 56, 6), (Default, 10, 15, 57, 6);
+(Default, 1, 10, 15, 3), (Default, 1, 10, 15, 4), (Default, 1, 10, 15, 5),
+(Default, 2, 10, 15, 9), (Default, 2, 10, 15, 10), (Default, 2, 10, 15, 11), 
+(Default, 3, 10, 15, 6), (Default, 3, 10, 15, 7), (Default, 3, 10, 15, 8),
+(Default, 4, 10, 15, 12), (Default, 4, 10, 15, 13), (Default, 4, 10, 15, 14),
+(Default, 5, 10, 15, 15), (Default, 5, 10, 15, 16), (Default, 5, 10, 15, 17), (Default, 5, 10, 15, 18), 
+(Default, 6, 10, 15, 19), (Default, 6, 10, 15, 20), (Default, 6, 10, 15, 21);
 
 create view vw_pacote
 as select
@@ -282,6 +294,8 @@ insert into tb_funcionario values('98623688689', 'Bruno Silva Bastos', 'Bruno', 
 ('57345699832', 'Gabriel Jard Recoaro Silva', 'Gabriel', 'gabriel.silva2615@etec.sp.gov.br', '11944485007', 'gjs261'),
 ('78456377925', 'Filipe Ferreiro Pereira', 'Filipe', 'felipe.pereira252@etec.sp.gov.br', '11989652235', 'ffp252'),
 ('56487933278', 'Pedro Augusto Souza Ribeiro de Aquino', 'Pedro Augusto', 'pedro.aquino@etec.sp.gov.br', '11977188102', 'paa564');
+
+
 
 insert into tb_cliente values('65789577234', 'Judith Brito', 'Judith', 'jud.brito@gmail.com', '11947265184'),
 ('57689455721', 'Elio Gaspari', 'Elio', 'elio.gaspari@gmail.com', '11976119231'),

@@ -54,6 +54,14 @@
         @Html.ValidationMessageFor(m => m.CPF_Cli)
     </div>
 
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Valor_Venda)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(m => m.Valor_Venda)
+        @Html.ValidationMessageFor(m => m.Valor_Venda)
+    </div>
+
     <div>
         <br><input type="submit" value="Enviar" />
     </div>

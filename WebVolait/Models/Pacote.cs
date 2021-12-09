@@ -33,9 +33,5 @@ namespace WebVolait.Models
         [StringLength(10, MinimumLength = 2, ErrorMessage = "*O campo destino permite apenas 2 a 10 caracteres")]
         public string Destino_Pacote { get; set; }
 
-        [Display(Name = "Código")]
-        [Required(ErrorMessage = "*O campo código é obrigatório")]
-        [Range(1, 10, ErrorMessage = "*Código inválido")]
-        public int Cod_ItemPacote { get; set; }
     }
 }

@@ -306,13 +306,13 @@ namespace WebVolait.Repositorio
         public void CadastrarPacote(Pacote pac)
         {
 
-            MySqlCommand cmd = new MySqlCommand("insert into tbFuncionario values(@fCod_Pacote, @Nome_Pacote, @Desc_Pacote, @Destino_Pacote, @Valor_Pacote, @Cod_ItemPacote)", con.ConectarBD());
+            MySqlCommand cmd = new MySqlCommand("insert into tb_pacote values(@fCod_Pacote, @Nome_Pacote, @Desc_Pacote, @Destino_Pacote, @Valor_Pacote)", con.ConectarBD());
             cmd.Parameters.Add("@Cod_Pacote", MySqlDbType.VarChar).Value = pac.Cod_Pacote;
             cmd.Parameters.Add("@Nome_Pacote", MySqlDbType.VarChar).Value = pac.Nome_Pacote;
             cmd.Parameters.Add("@Desc_Pacote", MySqlDbType.VarChar).Value = pac.Desc_Pacote;
             cmd.Parameters.Add("@Destino_Pacote", MySqlDbType.VarChar).Value = pac.Destino_Pacote;
             cmd.Parameters.Add("@Valor_Pacote", MySqlDbType.VarChar).Value = pac.Valor_Pacote;
-            cmd.Parameters.Add("@Cod_ItemPacote", MySqlDbType.VarChar).Value = pac.Cod_ItemPacote;
+          
             cmd.ExecuteNonQuery();
             con.DesconectarBD();
 
@@ -320,7 +320,7 @@ namespace WebVolait.Repositorio
 
         public Pacote ListarCodPacote(int cod)
         {
-            var comando = String.Format("select * from tb_pacote where Cod_Pacote = {0}", cod);
+            var comando = String.Format("select * from vw_pacote where Cod_Pacote = {0}", cod);
             MySqlCommand cmd = new MySqlCommand(comando, con.ConectarBD());
             var DadosCodPac = cmd.ExecuteReader();
             return ListarCodPac(DadosCodPac).FirstOrDefault();
@@ -338,7 +338,7 @@ namespace WebVolait.Repositorio
                     Desc_Pacote = (dt["Desc_Pacote"].ToString()),
                     Destino_Pacote = (dt["Destino_Pacote"].ToString()),
                     Valor_Pacote = (dt["Valor_Pacote"].ToString()),
-                    Cod_ItemPacote = ushort.Parse(dt["Cod_ItemPacote"].ToString()),
+                   
 
                 };
                 AltAl.Add(AlTemp);
@@ -350,7 +350,7 @@ namespace WebVolait.Repositorio
 
         public List<Pacote> ListarPacote()
         {
-            MySqlCommand cmd = new MySqlCommand("Select * from tb_pacote", con.ConectarBD());
+            MySqlCommand cmd = new MySqlCommand("Select * from vw_pacote", con.ConectarBD());
             var DadosPacote = cmd.ExecuteReader();
             return ListarTodosPacote(DadosPacote);
         }
@@ -367,7 +367,7 @@ namespace WebVolait.Repositorio
                     Desc_Pacote = (dt["Desc_Pacote"].ToString()),
                     Destino_Pacote = (dt["Destino_Pacote"].ToString()),
                     Valor_Pacote = (dt["Valor_Pacote"].ToString()),
-                    Cod_ItemPacote = ushort.Parse(dt["Cod_ItemPacote"].ToString()),
+                   
 
                 };
                 TodosPacotes.Add(PacoteTemp);
@@ -527,12 +527,13 @@ namespace WebVolait.Repositorio
         {
             //ATENTO COM AS CHAR E VARCHAR
             string data_sistema = Convert.ToDateTime(vend.Data_Venda).ToString("yyyy-MM-dd");
-            MySqlCommand cmd = new MySqlCommand("insert into tb_venda values(@NotaFiscal, @Data_Venda, @CPF_Func, @CPF_Cli, @Cod_TipoPagto)", con.ConectarBD());
+            MySqlCommand cmd = new MySqlCommand("insert into tb_venda values(@NotaFiscal, @Data_Venda, @CPF_Func, @CPF_Cli, @Cod_TipoPagto, @Valor_Venda)", con.ConectarBD());
             cmd.Parameters.Add("@NotaFiscal", MySqlDbType.VarChar).Value = vend.NotaFiscal;
             cmd.Parameters.Add("@Data_Venda", MySqlDbType.DateTime).Value = data_sistema;
             cmd.Parameters.Add("@CPF_Func", MySqlDbType.VarChar).Value = vend.CPF_Func;
             cmd.Parameters.Add("@CPF_Cli", MySqlDbType.VarChar).Value = vend.CPF_Cli;
             cmd.Parameters.Add("@Cod_TipoPagto", MySqlDbType.VarChar).Value = vend.Cod_TipoPagto;
+            cmd.Parameters.Add("@Valor_Venda", MySqlDbType.VarChar).Value = vend.Valor_Venda;
             cmd.ExecuteNonQuery();
             con.DesconectarBD();
 
@@ -540,7 +541,7 @@ namespace WebVolait.Repositorio
 
         public Venda ListarCodVenda(int cod)
         {
-            var comando = String.Format("select * from tb_venda where NotaFiscal = {0}", cod);
+            var comando = String.Format("select * from vw_venda where NotaFiscal = {0}", cod);
             MySqlCommand cmd = new MySqlCommand(comando, con.ConectarBD());
             var DadosCodVend = cmd.ExecuteReader();
             return ListarCodVend(DadosCodVend).FirstOrDefault();
@@ -555,9 +556,10 @@ namespace WebVolait.Repositorio
                 {
                     NotaFiscal = (dt["NotaFiscal"].ToString()),
                     Data_Venda = DateTime.Parse(dt["Data_Venda"].ToString()),
-                    CPF_Func = ushort.Parse(dt["CPF_Func"].ToString()),
-                    CPF_Cli = ushort.Parse(dt["CPF_Cli"].ToString()),
-                    Cod_TipoPagto = ushort.Parse(dt["Cod_TipoPagto"].ToString()),
+                    CPF_Func = (dt["CPF_Func"].ToString()),
+                    CPF_Cli = (dt["CPF_Cli"].ToString()),
+                    Cod_TipoPagto = int.Parse(dt["Cod_TipoPagto"].ToString()),
+                    Valor_Venda = decimal.Parse(dt["Cod_TipoPagto"].ToString()),
 
                 };
                 AltAl.Add(AlTemp);
@@ -569,7 +571,7 @@ namespace WebVolait.Repositorio
 
         public List<Venda> ListarVenda()
         {
-            MySqlCommand cmd = new MySqlCommand("Select * from tb_venda", con.ConectarBD());
+            MySqlCommand cmd = new MySqlCommand("Select * from vw_venda", con.ConectarBD());
             var DadosVenda = cmd.ExecuteReader();
             return ListarTodosVenda(DadosVenda);
         }
@@ -583,9 +585,10 @@ namespace WebVolait.Repositorio
                 {
                     NotaFiscal = (dt["NotaFiscal"].ToString()),
                     Data_Venda = DateTime.Parse(dt["Data_Venda"].ToString()),
-                    CPF_Func = ushort.Parse(dt["CPF_Func"].ToString()),
-                    CPF_Cli = ushort.Parse(dt["CPF_Cli"].ToString()),
-                    Cod_TipoPagto = ushort.Parse(dt["Cod_TipoPagto"].ToString()),
+                    CPF_Func = (dt["CPF_Func"].ToString()),
+                    CPF_Cli = (dt["CPF_Cli"].ToString()),
+                    Cod_TipoPagto = int.Parse(dt["Cod_TipoPagto"].ToString()),
+                    Valor_Venda = decimal.Parse(dt["Cod_TipoPagto"].ToString()),
 
                 };
                 TodosVendas.Add(VendaTemp);

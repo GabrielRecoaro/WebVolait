@@ -34,19 +34,26 @@ namespace WebVolait.Models
 
         private DateTime? data_Venda = null;
 
-        [Display(Name = "Nome do funcionário")]
-        [Required(ErrorMessage = "*O campo código é obrigatório")]
-        [Range(1, 4, ErrorMessage = "*Código inválido")]
-        public int CPF_Func { get; set; }
-
+    
         [Display(Name = "Código do tipo de pagamento")]
         [Required(ErrorMessage = "*O campo código é obrigatório")]
         [Range(1, 4, ErrorMessage = "*Código inválido")]
         public int Cod_TipoPagto { get; set; }
 
+        [Display(Name = "Nome do funcionário")]
+        [Required(ErrorMessage = "*O campo código é obrigatório")]
+        [Range(1, 4, ErrorMessage = "*Código inválido")]
+        public string CPF_Func { get; set; }
+
         [Display(Name = "Nome do cliente")]
         [Required(ErrorMessage = "*O campo código é obrigatório")]
         [Range(1, 4, ErrorMessage = "*Código inválido")]
-        public int CPF_Cli { get; set; }
+        public string CPF_Cli { get; set; }
+        
+        [Display(Name = "Valor da venda")]
+        [Required(ErrorMessage = "*O campo código é obrigatório")]
+        [Range(1, 4, ErrorMessage = "*Código inválido")]
+        public decimal Valor_Venda { get; set; }
+
     }
 }
