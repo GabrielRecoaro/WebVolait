@@ -412,7 +412,7 @@ namespace WebVolait.Repositorio
                     CNPJ_Passeio = (dt["CNPJ_Passeio"].ToString()),
                     Nome_Passeio = (dt["Nome_Passeio"].ToString()),
                     Desc_Passeio = (dt["Desc_Passeio"].ToString()),
-                    Duracao_Passeio = ushort.Parse(dt["Duracao_Passeio"].ToString()),
+                    Duracao_Passeio = (dt["Duracao_Passeio"].ToString()),
 
                 };
                 AltAl.Add(AlTemp);
@@ -441,7 +441,7 @@ namespace WebVolait.Repositorio
                     CNPJ_Passeio = (dt["CNPJ_Passeio"].ToString()),
                     Nome_Passeio = (dt["Nome_Passeio"].ToString()),
                     Desc_Passeio = (dt["Desc_Passeio"].ToString()),
-                    Duracao_Passeio = ushort.Parse(dt["Duracao_Passeio"].ToString()),
+                    Duracao_Passeio = (dt["Duracao_Passeio"].ToString()),
 
                 };
                 TodosPasseios.Add(PasseioTemp);
@@ -483,7 +483,7 @@ namespace WebVolait.Repositorio
                     Cod_Transp = ushort.Parse(dt["Cod_Transp"].ToString()),
                     Empresa_Transp = (dt["Empresa_Transp"].ToString()),
                     CNPJ_Transp = (dt["CNPJ_Transp"].ToString()),
-                    Duracao_Transp = ushort.Parse(dt["Duracao_Transp"].ToString()),
+                    Duracao_Transp = (dt["Duracao_Transp"].ToString()),
                     Cod_TipoTransp = ushort.Parse(dt["Cod_TipoTransp"].ToString()),
                     
                 };
@@ -511,7 +511,7 @@ namespace WebVolait.Repositorio
                     Cod_Transp = ushort.Parse(dt["Cod_Transp"].ToString()),
                     Empresa_Transp = (dt["Empresa_Transp"].ToString()),
                     CNPJ_Transp = (dt["CNPJ_Transp"].ToString()),
-                    Duracao_Transp = ushort.Parse(dt["Duracao_Transp"].ToString()),
+                    Duracao_Transp = (dt["Duracao_Transp"].ToString()),
                     Cod_TipoTransp = ushort.Parse(dt["Cod_TipoTransp"].ToString()),
                     
 

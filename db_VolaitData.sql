@@ -230,6 +230,7 @@ select * from tb_hospedagem;
 select * from tb_passeio;
 select * from tb_pacote;
 select * from tb_itempacote;
+select * from vw_venda;
 
 
 

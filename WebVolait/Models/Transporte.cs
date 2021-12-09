@@ -31,7 +31,6 @@ namespace WebVolait.Models
 
         [Display(Name = "Duração do transporte")]
         [Required(ErrorMessage = "*O campo duração do transporte é obrigatório")]
-        [Range(1, 10, ErrorMessage = "*Duração do transporte inválido")]
-        public int Duracao_Transp { get; set; }
+        public string Duracao_Transp { get; set; }
     }
 }
