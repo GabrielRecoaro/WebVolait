@@ -26,7 +26,7 @@ namespace WebVolait.Controllers
                 return View(login);
             }
 
-            var entrar = (login.Usuario == "admin" && login.Senha == "123");
+            var entrar = (login.Usuario == "Gabriel" && login.Senha == "123");
 
             if (entrar)
             {
