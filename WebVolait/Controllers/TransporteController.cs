@@ -21,7 +21,7 @@ namespace WebVolait.Controllers
             var transporte = new Transporte();
             return View(transporte);
         }
-        /*
+        
         Acoes ac = new Acoes();
         [HttpPost]
 
@@ -48,6 +48,6 @@ namespace WebVolait.Controllers
             var ExibirTransporte = new Acoes();
             var TodosTransporte = ExibirTransporte.ListarTransporte();
             return View(TodosTransporte);
-        }*/
+        }
     }
 }

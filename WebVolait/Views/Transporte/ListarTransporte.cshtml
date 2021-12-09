@@ -1,0 +1,68 @@
+﻿
+@model IEnumerable<WebVolait.Models.Transporte>
+@{
+    ViewBag.Title = "Listar";
+}
+
+<link rel="stylesheet" href="~/Content/bootstrap.css" />
+
+<br /><p>@Html.ActionLink("Novo transporte", "Transporte")</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m => m.Cod_Transp)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.Cod_TipoTransp)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.Empresa_Transp)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.Duracao_Transp)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.CNPJ_Transp)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cod_Transp)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Cod_TipoTransp)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa_Transp)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Duracao_Transp)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.CNPJ_Transp)
+            </td>
+
+
+            <td>
+                @Html.ActionLink("Alterar", "AltTransp", null, new { cdTransp = item.Cod_Transp }, new { @class = "btn btn-primary btn-xs" })
+                @Html.ActionLink("Deletar", "DelTransp", null, new { cdTransp = item.Cod_Transp }, new { @class = "btn btn-danger btn-xs" })
+            </td>
+
+        </tr>
+
+    }
+
+</table>

@@ -22,12 +22,12 @@ namespace WebVolait.Controllers
             return View(passeio);
         }
         
-        /*
+        
         Acoes ac = new Acoes();
         [HttpPost]
 
 
-        public ActionResult Passeio(Passeio passseio)
+        public ActionResult Passeio(Passeio passeio)
         {
             try
             {
@@ -49,6 +49,6 @@ namespace WebVolait.Controllers
             var ExibirPasseio = new Acoes();
             var TodosPasseio = ExibirPasseio.ListarPasseio();
             return View(TodosPasseio);
-        }*/
+        }
     }
 }

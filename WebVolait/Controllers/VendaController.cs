@@ -21,7 +21,7 @@ namespace WebVolait.Controllers
             var venda = new Venda();
             return View(venda);
         }
-        /*
+        
         Acoes ac = new Acoes();
         [HttpPost]
 
@@ -48,7 +48,7 @@ namespace WebVolait.Controllers
             var ExibirVenda = new Acoes();
             var TodosVenda = ExibirVenda.ListarVenda();
             return View(TodosVenda);
-        }*/
+        }
 
     }
 

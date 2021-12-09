@@ -21,7 +21,7 @@ namespace WebVolait.Controllers
             var hospedagem = new Hospedagem();
             return View(hospedagem);
         }
-        /*
+        
         Acoes ac = new Acoes();
         [HttpPost]
 
@@ -32,7 +32,7 @@ namespace WebVolait.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    ac.CadastrarJogo(hospedagem);
+                    ac.CadastrarHospedagem(hospedagem);
                     return RedirectToAction("ListarHospedagem");
                 }
                 return View(hospedagem);
@@ -48,6 +48,6 @@ namespace WebVolait.Controllers
             var ExibirHospedagem = new Acoes();
             var TodosHospedagem = ExibirHospedagem.ListarHospedagem();
             return View(TodosHospedagem);
-        }*/
+        }
     }
 }

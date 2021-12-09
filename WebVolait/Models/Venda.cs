@@ -37,7 +37,7 @@ namespace WebVolait.Models
         [Display(Name = "Nome do funcionário")]
         [Required(ErrorMessage = "*O campo código é obrigatório")]
         [Range(1, 4, ErrorMessage = "*Código inválido")]
-        public int Cod_Func { get; set; }
+        public int CPF_Func { get; set; }
 
         [Display(Name = "Código do tipo de pagamento")]
         [Required(ErrorMessage = "*O campo código é obrigatório")]
@@ -47,6 +47,6 @@ namespace WebVolait.Models
         [Display(Name = "Nome do cliente")]
         [Required(ErrorMessage = "*O campo código é obrigatório")]
         [Range(1, 4, ErrorMessage = "*Código inválido")]
-        public int Cod_Cli { get; set; }
+        public int CPF_Cli { get; set; }
     }
 }

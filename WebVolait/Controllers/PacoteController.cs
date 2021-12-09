@@ -21,7 +21,7 @@ namespace WebVolait.Controllers
             var pacote = new Pacote();
             return View(pacote);
         }
-        /*
+        
         Acoes ac = new Acoes();
         [HttpPost]
 
@@ -48,6 +48,6 @@ namespace WebVolait.Controllers
             var ExibirPacote = new Acoes();
             var TodosPacote = ExibirPacote.ListarPacote();
             return View(TodosPacote);
-        */
+        }
     }
 }

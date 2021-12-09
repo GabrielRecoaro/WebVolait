@@ -1,0 +1,68 @@
+﻿
+@model IEnumerable<WebVolait.Models.Venda>
+@{
+    ViewBag.Title = "Listar";
+}
+
+<link rel="stylesheet" href="~/Content/bootstrap.css" />
+
+<br /><p>@Html.ActionLink("Nova venda", "Venda")</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m => m.NotaFiscal)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.Data_Venda)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.Cod_TipoPagto)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.CPF_Func)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.CPF_Cli)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotaFiscal)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Data_Venda)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Cod_TipoPagto)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF_Func)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF_Cli)
+            </td>
+
+
+            <td>
+                @Html.ActionLink("Alterar", "AltVenda", null, new { cdVenda = item.NotaFiscal }, new { @class = "btn btn-primary btn-xs" })
+                @Html.ActionLink("Deletar", "DelVenda", null, new { cdVenda = item.NotaFiscal }, new { @class = "btn btn-danger btn-xs" })
+            </td>
+
+        </tr>
+
+    }
+
+</table>

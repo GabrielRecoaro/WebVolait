@@ -206,6 +206,11 @@
     <Content Include="Views\Funcionario\ListarFuncionario.cshtml" />
     <Content Include="Views\Cliente\ListarCliente.cshtml" />
     <Content Include="Views\Atendimento\ListarAtendimento.cshtml" />
+    <Content Include="Views\Hospedagem\ListarHospedagem.cshtml" />
+    <Content Include="Views\Pacote\ListarPacote.cshtml" />
+    <Content Include="Views\Passeio\ListarPasseio.cshtml" />
+    <Content Include="Views\Transporte\ListarTransporte.cshtml" />
+    <Content Include="Views\Venda\ListarVenda.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
