@@ -17,7 +17,7 @@ namespace WebVolait.Models
         [Display(Name = "Senha:")]
         public string Senha { get; set; }
 
-        [Display(Name = "Lembrar Me")]
+        [Display(Name = "Lembre de mim")]
         public bool LembrarMe { get; set; }
     }
 }
