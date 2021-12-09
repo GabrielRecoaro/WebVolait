@@ -1,0 +1,67 @@
+﻿@model IEnumerable<WebVolait.Models.Atendimento>
+@{
+    ViewBag.Title = "Listar";
+}
+<link rel="stylesheet" href="~/Content/bootstrap.css" />
+<br />
+
+<p>@Html.ActionLink("Novo atendimento","Atendimento")</p>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m => m.Cod_Atend)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.DataHora_Atend)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.Desc_Atend)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.NomeCliente_Atend)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(m => m.Cod_Func)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cod_Atend)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.DataHora_Atend)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Desc_Atend)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente_Atend)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Cod_Func)
+            </td>
+            <td>
+                @Html.ActionLink("Alterar", "AltAtend", null, new { cdAtend = item.Cod_Atend }, new { @class = "btn btn-primary btn-xs" })
+                @Html.ActionLink("Deletar", "DelAtend", null, new { cdJAtend = item.Cod_Atend }, new { @class = "btn btn-danger btn-xs" })
+            </td>
+
+        </tr>
+
+    }
+
+</table>

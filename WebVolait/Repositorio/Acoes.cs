@@ -159,5 +159,75 @@ namespace WebVolait.Repositorio
             return TodosCliente;
 
         }
+
+        public void CadastrarAtendimento(Atendimento atend)
+        {
+            string data_sistema = Convert.ToDateTime(atend.DataHora_Atend).ToString("yyyy-MM-dd");
+            MySqlCommand cmd = new MySqlCommand("insert into tb_atendimento values(@Cod_Atend, @Desc_Atend, @DataHora_Atend, @NomeCliente_Atend, @Cod_Func)", con.ConectarBD());
+            cmd.Parameters.Add("@Cod_Atend", MySqlDbType.VarChar).Value = atend.Cod_Atend;
+            cmd.Parameters.Add("@Desc_Atend", MySqlDbType.VarChar).Value = atend.Desc_Atend;
+            cmd.Parameters.Add("@DataHora_Atend", MySqlDbType.DateTime).Value = data_sistema;
+            cmd.Parameters.Add("@NomeCliente_Atend", MySqlDbType.VarChar).Value = atend.NomeCliente_Atend;
+            cmd.Parameters.Add("@Cod_Func", MySqlDbType.VarChar).Value = atend.Cod_Func;
+            cmd.ExecuteNonQuery();
+            con.DesconectarBD();
+
+        }
+
+        public Atendimento ListarCodAtendimento(int cod)
+        {
+            var comando = String.Format("select * from tb_atendimento where Cod_Atend = {0}", cod);
+            MySqlCommand cmd = new MySqlCommand(comando, con.ConectarBD());
+            var DadosCodAtend = cmd.ExecuteReader();
+            return ListarCodAtend(DadosCodAtend).FirstOrDefault();
+        }
+
+        public List<Atendimento> ListarCodAtend(MySqlDataReader dt)
+        {
+            var AltAl = new List<Atendimento>();
+            while (dt.Read())
+            {
+                var AlTemp = new Atendimento()
+                {
+                    Cod_Atend = ushort.Parse(dt["Cod_Atend"].ToString()),
+                    Desc_Atend = (dt["Desc_Atend"].ToString()),
+                    DataHora_Atend = DateTime.Parse(dt["DataHora_Atend"].ToString()),
+                    NomeCliente_Atend = (dt["NomeCliente_Atend"].ToString()),
+                    Cod_Func = ushort.Parse(dt["Cod_Func"].ToString()),
+                };
+                AltAl.Add(AlTemp);
+
+            }
+            dt.Close();
+            return AltAl;
+        }
+
+        public List<Atendimento> ListarAtendimento()
+        {
+            MySqlCommand cmd = new MySqlCommand("Select * from tb_atendimento", con.ConectarBD());
+            var DadosAtendimento = cmd.ExecuteReader();
+            return ListarTodosAtendimento(DadosAtendimento);
+        }
+
+        public List<Atendimento> ListarTodosAtendimento(MySqlDataReader dt)
+        {
+            var TodosAtendimento = new List<Atendimento>();
+            while (dt.Read())
+            {
+                var AtendimentoTemp = new Atendimento()
+                {
+                    Cod_Atend = ushort.Parse(dt["Cod_Atend"].ToString()),
+                    Desc_Atend = (dt["Desc_Atend"].ToString()),
+                    DataHora_Atend = DateTime.Parse(dt["DataHora_Atend"].ToString()),
+                    NomeCliente_Atend = (dt["NomeCliente_Atend"].ToString()),
+                    Cod_Func = ushort.Parse(dt["Cod_Func"].ToString()),
+
+                };
+                TodosAtendimento.Add(AtendimentoTemp);
+            }
+            dt.Close();
+            return TodosAtendimento;
+
+        }
     }
 }

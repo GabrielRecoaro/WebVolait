@@ -23,12 +23,12 @@ namespace WebVolait.Controllers
             return View(atendimento);
         }
 
-        /*
+       
          Acoes ac = new Acoes();
         [HttpPost]
 
 
-        public ActionResult Atendimento(Antendimento atendimento)
+        public ActionResult Atendimento(Atendimento atendimento)
         {
             try
             {
@@ -51,6 +51,6 @@ namespace WebVolait.Controllers
            var TodosAtendimento = ExibirAtendimento.ListarAtendimento();
            return View(TodosAtendimento);
 
-       }*/
+       }
     }
 }
